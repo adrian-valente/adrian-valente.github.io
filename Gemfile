@@ -1,6 +1,7 @@
 source "https://rubygems.org"
 
 # gem "jekyll-text-theme", path: "../"
+gem "github-pages"
 gem "jekyll-text-theme"
 
 gem "tzinfo-data"
