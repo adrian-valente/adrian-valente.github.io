@@ -143,12 +143,6 @@ GEM
     jekyll-sitemap (1.4.0)
       jekyll (>= 3.7, < 5.0)
     jekyll-swiss (1.0.0)
-    jekyll-text-theme (2.2.6)
-      jekyll (>= 3.6, < 5.0)
-      jekyll-feed (~> 0.1)
-      jekyll-paginate (~> 1.1)
-      jekyll-sitemap (~> 1.0)
-      jemoji (~> 0.8)
     jekyll-theme-architect (0.1.1)
       jekyll (~> 3.5)
       jekyll-seo-tag (~> 2.0)
@@ -241,8 +235,6 @@ GEM
       ethon (>= 0.9.0)
     tzinfo (1.2.6)
       thread_safe (~> 0.1)
-    tzinfo-data (1.2019.3)
-      tzinfo (>= 1.0.0)
     unicode-display_width (1.6.1)
     zeitwerk (2.2.2)
 
@@ -250,10 +242,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  activesupport (>= 4.1.11)
   github-pages
-  jekyll-text-theme
-  tzinfo-data
 
 BUNDLED WITH
    2.1.4

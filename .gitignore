@@ -1,4 +1,5 @@
 .jekyll-cache
 _site
 .sass-cache
-
+potential_posts/
+.DS_Store
