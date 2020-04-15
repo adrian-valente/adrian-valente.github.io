@@ -2,4 +2,7 @@
 _site
 .sass-cache
 potential_posts/
+Gemfile.lock
+*.gem
+.bundle
 .DS_Store

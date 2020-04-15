@@ -14,6 +14,7 @@ header_pages:
   - about.md
   - cv.md
   - research.md
+show_excerpts: true
 
 
 ## => Language and Timezone
@@ -72,3 +73,6 @@ paginate_path: /page:num # don't change this unless for special need
 ## => Sources
 ##############################
 sources: # bootcdn (default), unpkg
+
+  social_links:
+    github:  adrian-valente
