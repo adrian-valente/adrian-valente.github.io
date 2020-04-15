@@ -47,7 +47,6 @@ res = pool.map(task, args)
 with the required import statements:
 ```py
 import multiprocessing as mp
-import itertools
 ```
 The first one creates the `Pool` which is the object that will distribute the tasks accross cpu cores. You can give as argument the number of concurrent tasks that you want the computer to do. Usually it is fair to go for the number of cores given by `mp.cpu_count()`. In the second line, you create an iterable of arguments for each task. Here it is simple, it is the same argument for all tasks, repeated the number of times we want it to run. Finally the last line will magically execute the task in parallel with the argument list you provided and return all the return values bundled in a list.
 
