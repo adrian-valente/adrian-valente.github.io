@@ -10,39 +10,42 @@ This is what I thought for a long time, until I understood that parallellization
 
 In order to do this you need a loop that repeats the same operation several times, in which the result of an iteration is not needed in the next one, so that you can run all iterations in parallel. Typically, this applies very well to computations on Monte-Carlo or bootstrap samples, or optimization processes such as simulated annealing.
 
-So let us take for example the following code which samples 100 random matrices of size 1000x1000 and computes its eigenvalues, to check the [circular law](https://en.wikipedia.org/wiki/Circular_law) (not a mesmerizing example but minimal enough for our purposes)
+So let us take for example the following code which will simulate 10000 times a simple 2D random walk for 1000 steps and plot the distribution of the endpoints (not a very mesmerizing example but minimal enough for our purposes):
 ```py
-import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
+from time import time
+import random
 
-n = 1000
-eigvals = []
-
-for i in range(100):
-    X = np.random.randn(n, n) / np.sqrt(n)
-    eigvals.append(np.linalg.eigvals(X))
-
-eigvals = np.array(eigvals)
-real = np.real(eigvals).ravel()
-imag = np.imag(eigvals).ravel()
-sns.jointplot(real, imag, kind='hex')
+T = 1000
+endpoints = []
+for i in range(10000):
+    x = [0, 0]
+    for t in range(T):
+        x[0] += random.choice((-1, 1))
+        x[1] += random.choice((-1, 1))
+    endpoints.append(x)
+x0, x1 = zip(*endpoints)
+sns.jointplot(x0, x1, kind='hex')
 plt.show()
 ```
 
-Here, the loop is a clear target for parallellization, since it is just the same operation repeated 100 times. So to parallellize it, simply copy-paste the code inside the loop in a separate function called `task`. Add all the needed variables as arguments and the ones that will be reused as return values:
+Here, the outer loop is a clear target for parallellization, since it is just the same operation repeated many times (not the inner loop of course: you need one iteration to go to the next). So to parallellize it, simply copy-paste the code inside the loop in a separate function called `task`. Add all the needed variables as arguments and the ones that will be reused as return values:
 
 ```py
-def task(n):
-    X = np.random.randn(n, n) / np.sqrt(n)
-    return np.linalg.eigvals(X)
+def task(T):
+    x = [0, 0]
+    for t in range(T):
+        x[0] += random.choice((-1, 1))
+        x[1] += random.choice((-1, 1))
+    return x
 ```
 
 Now, only the 3 following lines are needed: 
 ```py
 pool = mp.Pool(mp.cpu_count())
-args = [1000] * 100
-res = pool.map(task, args)
+args = [1000] * 100000
+endpoints = pool.map(task, args)
 ```
 with the required import statements:
 ```py
@@ -52,32 +55,35 @@ The first one creates the `Pool` which is the object that will distribute the ta
 
 Important note: if your task has not one but several arguments you will have to put the arguments in a iterable of tuples, and use the `starmap` function instead of `map`:
 ```py
-args = [(1000, 1000)] * 100
+args = [(a, b)] * 100
 res = pool.starmap(task, args)
 ```
 
 Finally, to build the iterable less brutally the functions of `itertools` can be useful, for example:
 ```py
-args = itertools.repeat(argument_tuple, 100)
+args = itertools.repeat((a, b), 100)
 ```
 
 Here is the final code for the example program. Enjoy your fast computations!
 ```py
 import multiprocessing as mp
-import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
+import random
 
-def task(n):
-   X = np.random.randn(n, n) / np.sqrt(n)
-   return np.linalg.eigvals(X)
+def task(T):
+    x = [0, 0]
+    for t in range(T):
+        x[0] += random.choice((-1, 1))
+        x[1] += random.choice((-1, 1))
+    return x
 
 pool = mp.Pool(mp.cpu_count())
-args = [1000] * 100
-res = pool.map(task, args)
-res = np.array(res)
-real = np.real(res).ravel()
-imag = np.imag(res).ravel()
-sns.jointplot(real, imag, kind='hex')
+args = [1000] * 10000
+endpoints = pool.map(task, args)
+x0, x1 = zip(*endpoints)
+sns.jointplot(x0, x1, kind='hex')
 plt.show()
 ```
+
+Final note: one could imagine that the overhead caused by the creation and deletion of many threads would become an issue. I tried to make a smarter program by for example creating 8 threads with balanced load instead of brutally asking for 10000 of them like above. This brings no improvement, suggesting that the multiprocessing module takes care of these optimizations by itself!
