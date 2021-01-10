@@ -7,12 +7,13 @@
 
 theme: minima
 
-title   : Adrian Valente
-description: > # this means to ignore newlines until "Language & timezone"
-  Neuroscience, maths, programming
+title   : neurosopher
+description: Adrian Valente's blog # this means to ignore newlines until "Language & timezone"
+  
 header_pages:
-  - about.md
+  - index.md
   - cv.md
+  - blog.md
   - research.md
 show_excerpts: true
 
@@ -53,9 +54,10 @@ toc:
 
 ## => Markdown Enhancements
 ##############################
+markdown: kramdown
 ## Mathjax
 # mathjax: true # false (default), true
-# mathjax_autoNumber: # false (default), true
+# mathjax_autoNumber: true # false (default), true
 
 # ## Mermaid
 # mermaid: # false (default), true

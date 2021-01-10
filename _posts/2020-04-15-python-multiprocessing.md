@@ -30,7 +30,7 @@ sns.jointplot(x0, x1, kind='hex')
 plt.show()
 ```
 
-Here, the outer loop is a clear target for parallellization, since it is just the same operation repeated many times (not the inner loop of course: you need one iteration to go to the next). So to parallellize it, simply copy-paste the code inside the loop in a separate function called `task`. Add all the needed variables as arguments and the ones that will be reused as return values:
+Here, the outer loop is a clear target for parallellization, since it is just the same operation repeated many times (not the inner loop of course: you need one iteration to go to the next). So to parallellize it, simply copy-paste the code inside the loop in a separate function called <div class="mycode">task</div>. Add all the needed variables as arguments and the ones that will be reused as return values:
 
 ```py
 def task(T):
