@@ -9,7 +9,7 @@ title: CV
 - 2019 - 2022: ENS (Paris, France). PhD in computational neuroscience.
 
 ## Publications
-- *Complementary roles of dimensionality and populations structure in neural computations*, Dubreuil\*, Valente\*, Beiran, Mastrogiuseppe, Ostojic, [biorXiv](https://www.biorxiv.org/content/10.1101/2020.07.03.185942v1)
+- *The role of population structure in computations through neural dynamics*, Dubreuil\*, Valente\*, Beiran, Mastrogiuseppe, Ostojic, [biorXiv](https://www.biorxiv.org/content/10.1101/2020.07.03.185942v1)
 - *Shaping dynamics with multiple populations in low-rank recurrent networks*, Beiran\*, Dubreuil, Valente, Mastrogiuseppe, Ostojic, [arXiv](https://arxiv.org/abs/2007.02062)
 
 ## Poster presentations
