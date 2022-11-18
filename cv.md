@@ -10,6 +10,7 @@ title: CV
 
 
 ## Publications
+- *Extracting computational mechanisms from neural data using low-rank RNNs*, Valente A., Pillow J., Ostojic S., Neurips 2022. [openReview](https://openreview.net/forum?id=M12autRxeeS)
 - *Probing the relationship between linear dynamical systems and low-rank recurrent neural network models*, Valente, Ostojic, Pillow, Neural Computation, 34(9), p.1871-1892 [journal](https://direct.mit.edu/neco/article/34/9/1871/112382/Probing-the-Relationship-Between-Latent-Linear),[arXiv](https://arxiv.org/abs/2110.09804).
 - *The role of population structure in computations through neural dynamics*, Dubreuil\*, Valente\*, Beiran, Mastrogiuseppe, Ostojic, Nature Neuroscience, 25, p.783–794 (2022).  [biorXiv](https://www.biorxiv.org/content/10.1101/2020.07.03.185942v2), [editor's pdf](https://rdcu.be/cO4ru).
 - *Shaping dynamics with multiple populations in low-rank recurrent networks*, Beiran\*, Dubreuil, Valente, Mastrogiuseppe, Ostojic, Neural Computation, 33(6), 1572-1615 (2021). ([arXiv link](https://arxiv.org/abs/2007.02062))
