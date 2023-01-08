@@ -12,7 +12,8 @@ Hope you enjoy it here, and hope to see you around some day, maybe even outside 
 
 Reach me:
 - name.surname[at]ens.fr
-- [twitter](https://twitter.com/AdrianValente13)
+- [twitter](https://twitter.com/lowrank_adrian)
+- [mastodon](https://mastodon.online/@lowrank_adrian)
 - [Google Scholar](https://scholar.google.com/citations?user=uyLai34AAAAJ&hl=fr)
 
 <img align="right" src="assets/id.jpg" width="150"/>
