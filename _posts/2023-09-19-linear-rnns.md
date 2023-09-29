@@ -9,6 +9,16 @@ Transformers have completely taken by storm the field of sequence modelling with
 
 In this post, I want to give a broad introduction for people that do not follow closely the (crazily fast) field of deep learning to the recent developments of sequence modelling, explain why Tranformers have imposed themselves, and why and how RNNs are coming back, as well as describe these new classes of models that are starting to buzz.
 
+Table of contents:
+- [In the previous episodes](#in-the-previous-episodes)
+- [RNNs: the new generation](#rnns-the-new-generation)
+- [Some more tricks](#some-more-tricks)
+- [Are these networks universal learners?](#are-these-networks-universal-learners)
+- [Intuitively, how do these networks even compute?](#intuitively-how-do-these-networks-even-compute)
+- [Summary](#summary)
+- [Notes](#notes)
+
+
 # In the previous episodes
 We will first recall the precedents, ie. the demise of the RNN and success of the Transformer, and the first apparent limits of the latter. You may skip if you are familiar with Transformers.
 
