@@ -147,6 +147,7 @@ A quick demonstration of the phenomenon is the following: in one of the papers c
 
 I cannot close without strongly advising a recent paper by Il Memming Park's group[^12] which demonstrates continuous attractor-like behavior without internal dynamical attractors, and with oscillating dynamical modes instead, and outlines a rich theory. All this points, I think, to a deep dichotomy between two different ways of computing with high-d dynamics, and advantages and disadvantages of each will be interesting to understand, as well as figuring out which one brains are using.
 
+
 # Summary
 * The recent class of linear recurrent networks, which comprises works such as H3, S4, S5, RWKV and the LRU notably are simply composed of linear RNNs stacked with token-wise non-linear MLPs.
 * Even though their internal dynamics are linear, they are able to fit all sorts of non-linear dynamics.
