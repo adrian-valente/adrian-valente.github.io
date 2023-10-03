@@ -69,7 +69,7 @@ The fantastic core idea is the following: RNNs are prone to vanishing/exploding 
   $$
 </div>
 
-with $\Lambda$ the recurrence matrix, $B$ the input matrix, the $x_t$ are the hidden states and $u_t$ the inputs.
+with $\Lambda$ the recurrence matrix, $B$ the input matrix, the $h_t$ are the hidden states and $x_t$ the inputs.
 
 The problem is that linear RNNs are quite boring by themselves: they can only exhibit a fixed point at 0, and then activity that either explodes (eigenvalue > 1), decays to 0 (eigenvalue < 0), stays idle (eigenvalue = 1), or oscillates in clean concentric circles (pair of complex eigenvalues with module = 1). There is some variety but not enough to even get close to the diversity of dynamical systems out there, and all context-dependent operations (for example discovering that "not bad" is positive, not with the valence of "not" and "bad" summed) is out of reach.
 
