@@ -81,7 +81,7 @@ We need an additional trick of course, and it consists of adding a non-linear ma
   $$
 </div>
 
-where $\hat{f}_{\text{out}}$ is the output non-linearity that can be made as complex as one wants, that takes as input a linear readout of the hidden state noted $Cx_t$ (and a skip connection $Du_t$ that helps without modifying representational capacity). What matters is that **all non-linearities are kept above single tokens, they never occur in computations that impact time dynamics of internal states.** So dynamics here are always linear.
+where $\hat{f}_{\text{out}}$ is the output non-linearity that can be made as complex as one wants, that takes as input a linear readout of the hidden state noted $Ch_t$ (and a skip connection $Dx_t$ that helps without modifying representational capacity). What matters is that **all non-linearities are kept above single tokens, they never occur in computations that impact time dynamics of internal states.** So dynamics here are always linear.
 
  <div class="centrer">
   <img src="{{site.url}}/assets/lrus/lru.jpg" width="700"/>
@@ -90,7 +90,7 @@ where $\hat{f}_{\text{out}}$ is the output non-linearity that can be made as com
   </div>
   <br/>
 
-That's all, as simple as it seems! Then stack a few of those one above the other, and you're good to crush the long-range arena, and even design competitive LLMs! It is astonishing that a system relying only on linear dynamics, supposed to already be boring past the second year of undergrad. And they can be made even simpler as we will see below.
+That's all, as simple as it seems! Then stack a few of those one above the other, and you're good to crush the long-range arena, and even design competitive LLMs! It is astonishing that a system relying only on linear dynamics, supposed to already be boring past the second year of undergrad can reach state-of-the-art results. And they can be made even simpler as we will see below.
 
 In any case, this deserves a few more explanations. If you want more details, in the following, we will cover important tricks, the big universality question (with demo), and some more ideas about these networks.
 
