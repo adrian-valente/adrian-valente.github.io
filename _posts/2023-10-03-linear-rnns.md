@@ -131,6 +131,15 @@ There is no doubt that the LRU manages to capture intrinsically non-linear dynam
 
 *Addendum*: I thought any approximations results of the style would only hold on finite time intervals, but I was pointed to a fantastic proof by Stephen Boyd and Leon Chua[^boyd] showing approximations of non-linear dynamics with a linear DS can actually hold in infinite time intervals, provided that they have a property called **fading memory** which is exactly what one would think it is: differences of inputs in the far past have decreasing influence on present state (so not chaotic). However... If you care about long-term dependencies, till what point do you want the fading memory property to hold? #foodforthought
 
+*Addendum 2*: At this point I think it is essential to add a few words about this "HiPPO" theory I mentioned along the way, because it is a very beautiful and slightly orthogonal view of the problem. The idea behind the design of S4 and its precursor[^5] is to summarize as well as possible the input sequence into the final hidden state. We know ways to efficiently summarize sequences or signals in an Euclidean representation, for example through Fourier series or the less known [Legendre polynomials](https://en.wikipedia.org/wiki/Legendre_polynomials). Early works have proposed recurrent units that computed Fourier[^zhang-fourier] or Legendre[^voelker] coefficients of an input signal in an *online* fashion, but the general framework was formalized in Albert Gu's "High-order Polynomial Projection Operators" work that forms the basis for all these developments[^5]. It requires quite a bit of maths, but it also makes one of the most grounded frameworks in DL.
+
+  <div class="centrer">
+  <img src="{{site.url}}/assets/lrus/projections.jpg" width="750"/>
+  <br/>
+  Another view of linear recurrent networks through the HiPPO lens: consider that you have a input "signal" (here a continuous $x(t)$, but it could be a sequence of $x_t$), and you want to "summarize" it in the last hidden state $h_t$. The idea is to project this signal on a appropriate basis of functions, like cosines and sines of increasing frequencies (Fourier basis), or as illustrated here the set of Legendre polynomials. This gives a set of coefficients that we may want to see in the last hidden state. The HiPPO works provides a mathematical framework to do this online (ie. updating as the inputs arrive) with a linear RNN!
+  </div>
+  <br/><br/><br/>
+
 In fact it is fascinating to see that given enough memory space a linear DS can accomplish all sorts of interesting things. A paper by Zucchet, Kobayashi, Akram and colleagues[^zucchet] for example shows how they can reproduce a Transformer-like attention mechanism. Theoretical constructions always require capacities that would preclude any advantages of such networks, but in practice they seem to get along pretty well. In the end, how do they compute?
 
 # Intuitively, how do these networks even compute?
@@ -170,6 +179,8 @@ I cannot close without strongly advising a recent paper by Il Memming Park's gro
 [^proof]: [Orvieto et al., *On the Universality of Linear Recurrences Followed by Nonlinear Projections*, 2023](https://arxiv.org/abs/2307.11888). My understanding is that the proof involves showing that there can be a bijection from input sequence to final hidden state if N is large enough, but I'll have to read it again.
 [^9]: Network trained to reproduce at its outputs trajectories sampled from the target DS with random initial points, and additionally an MLP encoder that maps from the initial state to an initial $h_0$ for the LRU. 
 [^boyd]: [Boyd & Chua, *Fading Memory and the Problem of Approximating Nonlinear Operators with Volterra Series*, 1985](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=1085649&casa_token=O6usRF1jvNsAAAAA:DAxNHIMppUkZIu0FyXAbWRhj2qe3w-Dgyyk9Tt9tCKXGBojnOK9jjUeyy5As46bPUyFY_hgvTUA&tag=1)
+[^zhang-fourier]: [Zhang et al., *Learning Long Term Dependencies via Fourier Recurrent Units*, 2018](https://arxiv.org/abs/1803.06585)
+[^voelker]: [Voelker et al., *Legendre Memory Units: Continuous-Time Representation in Recurrent Neural Networks*, 2019](https://papers.nips.cc/paper/2019/hash/952285b9b7e7a1be5aa7849f32ffff05-Abstract.html)
 [^zucchet]: [Zucchet, Kobayashi, Akram et al. *Gated recurrent neural networks discover attention*, 2023](http://arxiv.org/abs/2309.01775)
 [^10]: [Sussillo and Barak, *Opening the Black Box: Low-Dimensional Dynamics in High-Dimensional Recurrent Neural Networks*, 2012](https://doi.org/10.1162/NECO_a_00409)
 <!-- [^11]: Just a note about code: great code to get started on an LRU with jax/flax by Nicolas is available [here](https://github.com/NicolasZucchet/minimal-LRU), a much more barebones and buggy pytorch implementation of my own is [here](https://github.com/adrian-valente/lru_experiments). -->

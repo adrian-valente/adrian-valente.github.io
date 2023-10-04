@@ -2,6 +2,7 @@
 _site
 .sass-cache
 potential_posts/
+support_codes/
 Gemfile.lock
 *.gem
 .bundle
