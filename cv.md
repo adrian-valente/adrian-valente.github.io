@@ -3,6 +3,8 @@ layout: page
 title: CV
 ---
 
+[Link to CV]({{site.url}}/assets/cv_valente.pdf)
+
 ## Studies
 - 2019 - 2023: ENS (Paris, France). PhD in computational neuroscience.
 - 2017 - 2019: EPFL (Lausanne, Switzerland). MSc in computer science. Minor in snowboard and hiking.
