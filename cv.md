@@ -25,6 +25,8 @@ title: CV
 - *Disentangling the roles of dimensionality and cell populations in neural computations*, Adrian Valente, Alexis Dubreuil, Francesca Mastrogiuseppe, Srdjan Ostojic, Neurips 2019 Workshop “Real Neurons and Hidden Units” [poster]({{site.url}}/assets/pdfs/poster_neurips19.pdf)
 - *Processing information stored in working memory through modulations of effective connectivity*, Adrian Valente, Alexis Dubreuil, Srdjan Ostojic, Neural Coding, Computations and Dynamics 2019 [poster]({{site.url}}/assets/pdfs/poster_nccd19.pdf)
 
+## PhD Thesis
+- *Low-rank network models of neural computations*, under the supervision of Srdjan Ostojic. Jury members: Devika Narain, Henning Sprekeler, Tatiana Engel, Jonathan Pillow, Peter Neri. [Link to pdf]({{site.url}}/assets/pdfs/thesis_full.pdf)
 
 ## Other
 - *Reverse-engineering low-rank recurrent neural networks*, Master Thesis, Sept. 2019. [pdf]({{site.url}}/assets/pdfs/report.pdf)

@@ -2,6 +2,9 @@
 layout: page
 title: Teaching
 ---
+# Course Interpretability and Explainability in AI - Attention-based models (2023, PSL University)
+- [slides](assets/pdfs/231130_attention_interp.pdf)
+- [lab notebooks](https://github.com/adrian-valente/xai_course_labs)
 
 # Course Neuroscience x AI - ESPCI 2022 (master BME)
 - [slides](assets/pdfs/slides_espci2022.pdf) 
