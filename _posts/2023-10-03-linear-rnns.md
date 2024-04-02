@@ -5,6 +5,8 @@ excerpt: Transformers have completely taken by storm the field of sequence model
 use_math: true
 ---
 
+<a href="https://doi.org/10.59350/pepzc-the79" style="color:gray; font-size: 14px">doi:10.59350/pepzc-the79</a>
+
 Transformers have completely taken by storm the field of sequence modelling with deep networks, becoming the standard for text processing, video, even images. RNNs that were once a very active engineering field have slowly faded into the void. All of them? No, some RNNs are bravely fighting back to claim state-of-the-art results in sequence tasks. The most suprising part? They are linear...
 
 In this post, I want to give a broad introduction for people that do not follow closely the (crazily fast) field of deep learning to the recent developments of sequence modelling, explain why Tranformers have imposed themselves, and why and how RNNs are coming back, as well as describe these new classes of models that are starting to buzz.

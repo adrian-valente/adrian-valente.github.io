@@ -5,6 +5,8 @@ excerpt: This post is an attempt at summarizing results obtained over five years
 use_math: true
 ---
 
+<a href="https://doi.org/10.59350/xbkqn-wmg19" style="color:gray; font-size: 14px">doi:10.59350/xbkqn-wmg19</a>
+
 This post is an attempt at summarizing results obtained over five years of research in the laboratory of Srdjan Ostojic, at ENS Paris, on the uses of low-rank RNNs, in a ten-minutes read. Let's see if that's enough to catch your interest!
 
 *This post has been written with invaluable inputs from several lab members, in particular Friedrich Schuessler, Francesca Mastrogiuseppe and Srdjan Ostojic. Many thanks to them!*
