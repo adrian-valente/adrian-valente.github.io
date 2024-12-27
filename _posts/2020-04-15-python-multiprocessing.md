@@ -26,7 +26,7 @@ for i in range(10000):
         x[1] += random.choice((-1, 1))
     endpoints.append(x)
 x0, x1 = zip(*endpoints)
-sns.jointplot(x0, x1, kind='hex')
+sns.jointplot(x=x0, y=x1, kind='hex')
 plt.show()
 ```
 
