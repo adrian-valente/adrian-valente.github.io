@@ -3,13 +3,13 @@
 
 @import "minima";
 
-// body
-// {
-//     background: cornsilk;
-//     font-family: 'Baskerville', sans-serif;
-//     font-size: 1.1em;
-//     color: #181818;
-// }
+body
+{
+    background: cornsilk;
+    font-family: 'Baskerville', sans-serif;
+    font-size: 1.1em;
+    color: #181818;
+}
 
 .highlight {
     background: #212121;
@@ -82,6 +82,20 @@ code
 {
     color: cornsilk;
     background-color: #212121;
+}
+
+.language-plaintext
+{
+  // background: cornsilk;
+  // font-family: 'Courier New', monospace;
+  // font-size: 0.9em;
+  // color: #181818;
+  color: #d63384; /* Distinct color for inline code */
+  background-color: #f8f9fa; /* Subtle background */
+  padding: 0.2em 0.4em;
+  border: 1px solid #dee2e6; /* Light border */
+  border-radius: 3px;
+  font-size: 0.9em;
 }
 
 .mycode
