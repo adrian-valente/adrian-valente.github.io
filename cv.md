@@ -10,6 +10,9 @@ title: CV
 - 2017 - 2019: EPFL (Lausanne, Switzerland). MSc in computer science. Minor in snowboard and hiking.
 - 2014 - 2017: École Polytechnique (Palaiseau, France). Studies in maths & computer science.
 
+## Work experience
+- Since May 2024: Research Engineer at [Instadeep](https://instadeep.com/). Developing large language models (LLMs) for genomic data.
+- June 2023 - March 2024: Postdoc & research scientist at [Centre Léon Bérard](https://www.centreleonberard.fr/en) and [Ervimmune](https://ervimmune.com/about/). Models of epitope presentation and target discovery for cancer immunotherapies.   
 
 ## Publications
 - *Extracting computational mechanisms from neural data using low-rank RNNs*, Valente A., Pillow J., Ostojic S., Neurips 2022. [openReview](https://openreview.net/forum?id=M12autRxeeS), [poster]({{site.url}}/assets/pdfs/poster_neurips22.pdf)
