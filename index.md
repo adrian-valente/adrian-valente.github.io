@@ -19,7 +19,10 @@ Find me:
 <img align="right" src="assets/id.jpg" width="150"/>
 
 ## Featured projects and posts
-- [Low-rank RNNs](
+- [Low-rank RNNs]({{site.url}}/2022/06/01/low-rank-summary.html): a summary of my PhD work on low-rank RNNs and their applications to interpretability of neural dynamics.
+- [RNNs strike back]({{site.url}}/2023/10/03/linear-rnns.html): a post covering the field of linear RNNs, also known as state-space models, and how they came back in the race for SOTA sequence modelling when we thought Transformers had killed them.
+- [Software engineering for scientists](https://avalente.quarto.pub/sweforscientists/): a WIP of 2025, this is a book I am writing to help scientists master the best practices of software engineering, like version control, testing, CI/CD, containerization and many more.
+- [hippoLLM](https://github.com/adrian-valente/hippollm): a project from 2024 exploring the use of hybrid graph-vector databases as long-term memory modules for LLMs.
 
 ## Some external links
 - [An interesting take on research debt](https://distill.pub/2017/research-debt/)
