@@ -79,3 +79,7 @@ sources: # bootcdn (default), unpkg
 
   social_links:
     github:  adrian-valente
+
+url: "https://adrian-valente.github.io"
+plugins:
+  - jekyll-sitemap
